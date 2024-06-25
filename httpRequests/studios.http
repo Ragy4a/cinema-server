@@ -1,0 +1,35 @@
+GET http://localhost:5000/studios
+
+###
+
+GET http://localhost:5000/studios/1
+
+###
+
+POST http://localhost:5000/studios HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Warner Bros. Entertainment Inc.",
+    "location": "Burbank",
+    "foundationYear": 1923,
+    "movies": ["Inception", "The Matrix"],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/32/Warner_Bros_logo.svg"
+}
+
+###
+
+PUT http://localhost:5000/studios/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Lucasfilm Ltd. Updated",
+    "location": "San Francisco",
+    "foundationYear": 1971,
+    "movies": ["Star Wars", "Indiana Jones"],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lucasfilm_logo.svg"
+}
+
+###
+
+DELETE http://localhost:5000/studios/2

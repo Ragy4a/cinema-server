@@ -1,0 +1,35 @@
+GET http://localhost:5000/movies
+
+###
+
+GET http://localhost:5000/movies/1
+
+###
+
+POST http://localhost:5000/movies HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Inception",
+    "directors": ["Christopher Nolan"],
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+    "studios": ["Warner Bros. Pictures"],
+    "poster": "https://upload.wikimedia.org/wikipedia/ru/7/7f/Inception_poster.jpg"
+}
+
+###
+
+PUT http://localhost:5000/movies/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Indiana Johns: The Last Crusade Updated",
+    "directors": ["Steven Spielberg"],
+    "actors": ["Harrison Ford", "Sean Connery"],
+    "studios": ["Lucas Film"],
+    "poster": "https://upload.wikimedia.org/wikipedia/ru/8/8b/IJandCrystalSkull.jpg"
+}
+
+###
+
+DELETE http://localhost:5000/movies/3
